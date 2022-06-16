@@ -4,7 +4,7 @@
 
 ## Overview
 | Category | Name |
-| ;-- | ;-- |
+| :-- | :-- |
 | OS | Arch Linux |
 | WM | bspwm |
 | Bar | Polybar |
@@ -14,6 +14,6 @@
 
 ## Themes List
 | Theme | Colors |
-| ;-- | ;-- |
+| :-- | :-- |
 | Ganyu | dark blue |
 | Emilia | yellow-cyan |
