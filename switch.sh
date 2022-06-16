@@ -9,7 +9,7 @@ DIR_rofi="$HOME/.config/rofi/"
 DIR_picom="$HOME/.config/picom/"
 DIR_wallpaper="$HOME/Pictures/Wallpapers/"
 DIR_nmdmenu="$HOME/.config/networkmanager-dmenu"
-DIR_chrome="$HOME/.mozilla/firefox/*."
+DIR_chrome="" ### Can't be set without setting the chrome_profile value first
 
 # Vars
 themes=()
@@ -46,6 +46,7 @@ if [[ "$chosen_theme" =~ ^[0-9]+$ ]]
 		set_theme=${themes[$chosen_theme-1]}
 		cd $set_theme
 		read -p "[?] Chrome profile name: " chrome_profile
+		DIR_chrome="$HOME/.mozilla/firefox/$(grep "$chrome_profile" $HOME/.mozilla/firefox/profiles.ini | grep Path | sed 's/[=a-zA-z]\{1,\}//')/"
 else
 		echo -e "\n[-] Invalid Choice, Exiting\n"
 		fi
@@ -94,7 +95,9 @@ then
 				;;
 				"chrome")
 					echo -e "[+] Copying chrome profile"
-					cp -r $f/* "$DIR_chrome$chrome_profile"
+					cp -r $f/* "$DIR_chrome/chrome"
+					cp -r "$f/user.js" "$DIR_chrome/"
+					echo -e "[+] Done\n"
 				;;
 			esac
 	done

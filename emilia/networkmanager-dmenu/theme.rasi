@@ -49,8 +49,8 @@ window {
     border-color: 					@ac;
     border-radius: 					0px;
     padding: 						30;
-    width: 						30%;
-    height: 						80%;
+    width: 						    20%;
+    height: 						70%;
 }
 
 prompt {
