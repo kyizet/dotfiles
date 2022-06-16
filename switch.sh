@@ -96,7 +96,6 @@ then
 				"chrome")
 					echo -e "[+] Copying chrome profile"
 					cp -r $f/* "$DIR_chrome/chrome"
-					cp -r "$f/user.js" "$DIR_chrome/"
 					echo -e "[+] Done\n"
 				;;
 			esac
