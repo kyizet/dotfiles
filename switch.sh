@@ -46,7 +46,7 @@ if [[ "$chosen_theme" =~ ^[0-9]+$ ]]
 		set_theme=${themes[$chosen_theme-1]}
 		cd $set_theme
 		read -p "[?] Chrome profile name: " chrome_profile
-		DIR_chrome="$HOME/.mozilla/firefox/$(grep "$chrome_profile" $HOME/.mozilla/firefox/profiles.ini | grep Path | sed 's/[=a-zA-z]\{1,\}//')/"
+		DIR_chrome="$HOME/.mozilla/firefox/$(grep "$chrome_profile" $HOME/.mozilla/firefox/profiles.ini | grep Path | sed 's/[=a-zA-z]\{1,\}//')"
 else
 		echo -e "\n[-] Invalid Choice, Exiting\n"
 		fi
