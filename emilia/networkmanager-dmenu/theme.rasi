@@ -48,7 +48,7 @@ window {
     border: 						0px;
     border-color: 					@ac;
     border-radius: 					0px;
-    padding: 						30;
+    padding: 						20;
     width: 						    20%;
     height: 						70%;
 }
